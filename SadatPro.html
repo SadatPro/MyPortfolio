@@ -76,7 +76,7 @@
     /* Button Styling */
     .btn {
       padding: 10px 20px;
-      background-color: #b22222;
+      background-color: #000000;
       color: #fff;
       text-decoration: none;
       border-radius: 5px;
@@ -85,7 +85,7 @@
       transition: background-color 0.3s;
     }
     .btn:hover {
-      background-color: #d32727;
+      background-color: #002a34;
     }
     /* Social Media Links */
     .social-media {
@@ -173,9 +173,10 @@
       background-color: rgba(255, 255, 255, 0.15);
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      background-size: cover;
-      background-position: center;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      background-size: contain;
+      background-repeat: no-repeat;
+    background-position: center;
+    rder: 1px solid rgba(255, 255, 255, 0.2);
     }
     /* Slider Navigation Buttons */
     .slider-nav {
@@ -298,6 +299,12 @@
         height: 150px;
       }
     }
+    h4 {
+            margin-bottom: 15px; /* Adjust spacing as desired */
+        }
+        p {
+            margin-top: 10px; /* Optional, additional control over spacing */
+        }
   </style>
 </head>
 
@@ -333,9 +340,9 @@
     <div class="glass-card">
       <h3>Connect with me</h3>
       <div class="social-media">
-        <a href="https://www.instagram.com/"><img src="https://www.vectorlogo.zone/logos/instagram/instagram-icon.svg" alt="Instagram"></a>
-        <a href="https://www.linkedin.com/"><img src="https://www.vectorlogo.zone/logos/linkedin/linkedin-icon.svg" alt="LinkedIn"></a>
-        <a href="https://github.com/"><img src="https://www.vectorlogo.zone/logos/github/github-icon.svg" alt="GitHub"></a>
+        <a href="https://www.instagram.com/"><img src="https://skillicons.dev/icons?i=instagram" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/"><img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn"></a>
+        <a href="https://github.com/"><img src="https://skillicons.dev/icons?i=github" alt="GitHub"></a>
         <a href="https://t.me/"><img src="https://www.vectorlogo.zone/logos/telegram/telegram-icon.svg" alt="Telegram"></a>
         <a href="https://www.blogger.com/"><img src="https://www.vectorlogo.zone/logos/blogger/blogger-icon.svg" alt="Blogger"></a>
       </div>
@@ -471,12 +478,12 @@
 
     <!-- Certificates Section with Wider Slider -->
     <div class="glass-card">
-      <h4>Certificates</h4>
+      <h4>Gallery</h4>
       <div class="certificate-slider">
         <div class="slider-container" id="sliderContainer">
-          <div class="certificate-item" style="background-image: url('https://via.placeholder.com/800x300?text=Cert+1');"></div>
-          <div class="certificate-item" style="background-image: url('https://via.placeholder.com/800x300?text=Cert+2');"></div>
-          <div class="certificate-item" style="background-image: url('https://via.placeholder.com/800x300?text=Cert+3');"></div>
+          <div class="certificate-item" style="background-image: url('https://blogger.googleusercontent.com/img/a/AVvXsEhrPvb2-B_Kqra6k8E2rFeOLq6l1GgUtr37Gsi78AW1hnwPi_RWRK6srHbh6qYvQOX-wlY8dgbLQdU-AHVU3Ajb-Cl7g-QVE4hare2YflTvZjUtNgFnHR56qZ5yw2eIXg4d2L_Nq0s07VjHUBX5VWEvRAp_b3g3oc_afnC3Lz_vZAzqQXshixmIqx0F9VGy=w400-h365');"></div>
+          <div class="certificate-item" style="background-image: url('https://blogger.googleusercontent.com/img/a/AVvXsEh-asoQl7oJVjqg-J-twUk--Xy0dykDJArlDkm7AFCNvJECmoHxcYHijrl47Y4Mb4ezb-9cr9Lf3kxKAwDTTnhvkBldHYMR6YSBwN5Rq_P7MIy7U8qdO1xcOfoFIBTo9mIwoa234sveDV4wXS2RNyLIcVopqaTOD5DNihz5IAnvhFmkkV1OWyCwKqywM4bK=w640-h426');"></div>
+          <div class="certificate-item" style="background-image: url('https://blogger.googleusercontent.com/img/a/AVvXsEj7DFPe_2SwcupJCn18z2If9DubEKcgPVy9GyHVDDhsUrAUmJgCaQdMt7PrcBeiZiFJOeCPiO3IIZY2skRRDUuiXuESorlBgo1YKUSKRs5S497UaOEccSdRugVJoAMjkl7E40XQE4G4qvdxwJzTP0fYwblMnbrj4JiVysaA9V0yHmc9JPJe1XvspetskPWw=w400-h300');"></div>
         </div>
         <div class="slider-nav">
           <button class="slider-btn" onclick="prevSlide()">&#10094;</button>
@@ -487,7 +494,6 @@
 
     <!-- Contact Section -->
     <div class="glass-card">
-      <h3>Contact Me</h3>
       <a href="mailto:mailsadat@proton.me" class="btn">📧 Email Me</a>
     </div>
   </div>
