@@ -207,34 +207,34 @@
     }
     /* Footer */
     .footer {
-      margin-top: 20px;
-      padding: 15px 0;
-      background-color: rgba(0, 0, 0, 0.7);
-      width: 100%;
-      text-align: center;
-    }
-    .footer-scroll {
-      display: flex;
-      overflow-x: auto;
-      gap: 20px;
-      justify-content: start;
-      padding: 10px 0;
-      animation: scroll-left 20s linear infinite;
-    }
-    .footer-scroll img {
-      height: 50px;
-      transition: transform 0.2s;
-      filter: grayscale(100%);
-    }
-    .footer-scroll img:hover {
-      transform: scale(1.1);
-      filter: grayscale(0%);
-    }
-    /* Footer Auto-Scroll Animation */
-    @keyframes scroll-left {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-100%); }
-    }
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .footer-bar {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-scroll {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    gap: 50px; /* Adds space between images */
+  }
+
+  .footer-scroll img {
+    display: inline-block;
+    height: 50px;
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth scaling transition */
+  }
+
+  .footer-scroll img:hover {
+    transform: scale(1.2); /* Scale effect on hover */
+  }
 
     /* Responsive Styling */
     @media (max-width: 768px) {
@@ -305,6 +305,96 @@
         p {
             margin-top: 10px; /* Optional, additional control over spacing */
         }
+          /* Basic styles for footer */
+    .footer {
+      padding: 10px 0;
+      text-align: center;
+    }
+  
+    .footer-bar {
+      overflow: hidden;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .footer-scroll {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      gap: 50px; /* Adds space between images */
+    }
+  
+    .footer-scroll img {
+      display: inline-block;
+      height: 50px;
+      border-radius: 8px; /* Rounded corners */
+      transition: transform 0.3s ease; /* Smooth scaling transition */
+    }
+  
+    .footer-scroll img:hover {
+      transform: scale(1.2); /* Scale effect on hover */
+    }
+  
+    /* Contact section styling */
+    .contact-section {
+      margin-top: 20px;
+    }
+  
+    .contact-section button {
+      padding: 10px 15px;
+      margin: 5px;
+      cursor: pointer;
+      background-color: #000000;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+  
+    .contact-section button:hover {
+      background-color: #003339;
+    }
+  
+    /* Dialog box styles */
+    .dialog {
+      display: none; /* Hidden by default */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 19, 42, 0.695);
+      color: #ffffff;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .dialog-content {
+      background-color: #002032d0;
+      padding: 20px;
+      border-radius: 5px;
+      width: 80%;
+      max-width: 400px;
+      position: relative;
+    }
+  
+    .dialog-content h4 {
+      margin-top: 0;
+    }
+  
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      color: #aaa;
+    }
+  
+    .close:hover {
+      color: #333;
+    }
   </style>
 </head>
 
@@ -364,9 +454,9 @@
               <br>Dart
             </td>
             <td align="center" width="100">
-              <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="Firebase" width="45"
+              <img src="https://skillicons.dev/icons?i=illustrator" alt="illustrator" width="45"
                 height="45" />
-              <br>Firebase
+              <br>illustrator
             </td>
             <td align="center" width="100">
               <img src="https://skillicons.dev/icons?i=cpp" alt="C++" width="45" height="45" />
@@ -463,7 +553,7 @@
       </table>
     </div>
 
-    <!-- Image Gallery Section -->6
+    <!-- Image Gallery Section -->
     <div class="glass-card">
       <h3>Achivements</h3>
       <div class="gallery">
@@ -495,27 +585,68 @@
     <!-- Contact Section -->
     <div class="glass-card">
       <a href="mailto:mailsadat@proton.me" class="btn">📧 Email Me</a>
+
+
+      <div class="contact-section">
+        <button onclick="showDialog('address-dialog')">Address</button>
+        <button onclick="showDialog('education-dialog')">Educational and Working Institute Information</button>
+      </div>
+    
+      <!-- Address Dialog -->
+      <div id="address-dialog" class="dialog">
+        <div class="dialog-content">
+          <span class="close" onclick="closeDialog('address-dialog')">&times;</span>
+          <h4>Address Information</h4>
+          <p>Current Address : Dhaka, Aahulia, paragaon</p>
+          <p>Home Address : Naogaon sadar, Rajshahi</p>
+        </div>
+      </div>
+    
+      <!-- Educational and Working Institute Dialog -->
+      <div id="education-dialog" class="dialog">
+        <div class="dialog-content">
+          <span class="close" onclick="closeDialog('education-dialog')">&times;</span>
+          <h4>Educational and Working Institute Information</h4>
+          <p>I completated my Secondery school cirtificate from janakollyan model High School.  </p>
+
+            <p>I completated my Higher Secondery school cirtificate from Rajshahi cantonment board school and collage,</p>
+
+              <p>I am currently styding as a third yer student at daffodil international uivercity,</p>
+
+                <p>I also works as a 3d modeling and Iot product designer at DIU ESRC.</p>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 
   <!-- Scrollable Footer with Partner Logos -->
   <footer class="footer">
     <h3>Partners and Collaborations</h3>
-    <div class="footer-scroll">
-      <img src="https://via.placeholder.com/100x50?text=Partner+1" alt="Partner 1">
-      <img src="https://via.placeholder.com/100x50?text=Partner+2" alt="Partner 2">
-      <img src="https://via.placeholder.com/100x50?text=Partner+3" alt="Partner 3">
-      <img src="https://via.placeholder.com/100x50?text=Partner+4" alt="Partner 4">
-      <img src="https://via.placeholder.com/100x50?text=Partner+5" alt="Partner 5">
+    <div class="footer-bar">
+      <div class="footer-scroll">
+        <!-- Duplicate the images to create an infinite scrolling loop -->
+        <img src="https://via.placeholder.com/100x50?text=Partner+1" alt="Partner 1">
+        <img src="https://via.placeholder.com/100x50?text=Partner 2">
+        <img src="https://via.placeholder.com/100x50?text=Partner+3" alt="Partner 3">
+        <img src="https://via.placeholder.com/100x50?text=Partner+4" alt="Partner 4">
+        <img src="https://via.placeholder.com/100x50?text=Partner+5" alt="Partner 5">
+        <!-- Repeating images for seamless scrolling -->
+        <img src="https://via.placeholder.com/100x50?text=Partner+1" alt="Partner 1">
+        <img src="https://via.placeholder.com/100x50?text=Partner 2">
+        <img src="https://via.placeholder.com/100x50?text=Partner+3" alt="Partner 3">
+        <img src="https://via.placeholder.com/100x50?text=Partner+4" alt="Partner 4">
+        <img src="https://via.placeholder.com/100x50?text=Partner+5" alt="Partner 5">
+      </div>
     </div>
   </footer>
 
   <script>
     // News Tracker Typing Effect
     const newsList = [
-      "🚀 Charity Valorant Tournament 2024 raised over $10,000!",
+      "🚀 Actively Working on marse rover challange",
       "🌍 NASA Space Apps Challenge Bangladesh 2024 concluded successfully!",
-      "🎮 ExoArc VR Game Development project launched!",
+      "🎮 Designing a drone",
     ];
     let currentNewsIndex = 0;
     let currentCharIndex = 0;
@@ -566,6 +697,16 @@
     }
 
     setInterval(nextSlide, 3000); // Auto-slide every 3 seconds
+    
+     // Function to show a dialog
+     function showDialog(dialogId) {
+      document.getElementById(dialogId).style.display = 'flex';
+    }
+  
+    // Function to close a dialog
+    function closeDialog(dialogId) {
+      document.getElementById(dialogId).style.display = 'none';
+    }
   </script>
 </body>
 </html>
