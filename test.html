@@ -1,0 +1,141 @@
+<footer class="footer">
+    <h3>Partners and Collaborations</h3>
+    <div class="footer-bar">
+      <div class="footer-scroll">
+        <!-- Static set of images -->
+        <img src="https://via.placeholder.com/100x50?text=Partner+1" alt="Partner 1">
+        <img src="https://via.placeholder.com/100x50?text=Partner 2">
+        <img src="https://via.placeholder.com/100x50?text=Partner+3" alt="Partner 3">
+        <img src="https://via.placeholder.com/100x50?text=Partner+4" alt="Partner 4">
+        <img src="https://via.placeholder.com/100x50?text=Partner+5" alt="Partner 5">
+      </div>
+    </div>
+  
+    <div class="contact-section">`
+      <button onclick="showDialog('address-dialog')">Address</button>
+      <button onclick="showDialog('education-dialog')">Educational and Working Institute Information</button>
+    </div>
+  
+    <!-- Address Dialog -->
+    <div id="address-dialog" class="dialog">
+      <div class="dialog-content">
+        <span class="close" onclick="closeDialog('address-dialog')">&times;</span>
+        <h4>Address Information</h4>
+        <p>Your address details go here.</p>
+      </div>
+    </div>
+  
+    <!-- Educational and Working Institute Dialog -->
+    <div id="education-dialog" class="dialog">
+      <div class="dialog-content">
+        <span class="close" onclick="closeDialog('education-dialog')">&times;</span>
+        <h4>Educational and Working Institute Information</h4>
+        <p>Your educational and working institute details go here.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <style>
+    /* Basic styles for footer */
+    .footer {
+      padding: 10px 0;
+      text-align: center;
+    }
+  
+    .footer-bar {
+      overflow: hidden;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .footer-scroll {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      gap: 50px; /* Adds space between images */
+    }
+  
+    .footer-scroll img {
+      display: inline-block;
+      height: 50px;
+      border-radius: 8px; /* Rounded corners */
+      transition: transform 0.3s ease; /* Smooth scaling transition */
+    }
+  
+    .footer-scroll img:hover {
+      transform: scale(1.2); /* Scale effect on hover */
+    }
+  
+    /* Contact section styling */
+    .contact-section {
+      margin-top: 20px;
+    }
+  
+    .contact-section button {
+      padding: 10px 15px;
+      margin: 5px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+  
+    .contact-section button:hover {
+      background-color: #0056b3;
+    }
+  
+    /* Dialog box styles */
+    .dialog {
+      display: none; /* Hidden by default */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .dialog-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      width: 80%;
+      max-width: 400px;
+      position: relative;
+    }
+  
+    .dialog-content h4 {
+      margin-top: 0;
+    }
+  
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      color: #aaa;
+    }
+  
+    .close:hover {
+      color: #333;
+    }
+  </style>
+  
+  <script>
+    // Function to show a dialog
+    function showDialog(dialogId) {
+      document.getElementById(dialogId).style.display = 'flex';
+    }
+  
+    // Function to close a dialog
+    function closeDialog(dialogId) {
+      document.getElementById(dialogId).style.display = 'none';
+    }
+  </script>
+  
